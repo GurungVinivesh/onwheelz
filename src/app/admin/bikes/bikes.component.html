@@ -1,0 +1,45 @@
+<div class="container-fluid mt-5">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-2 bg-white text-dark">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link text-black" routerLink="/admindash" routerLinkActive="active">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black" routerLink="/bikes" routerLinkActive="active">Bikes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-black" routerLink="/addride" routerLinkActive="active">Service</a>
+        </li>
+      </ul>
+    </div>
+  <div class="col-10">
+    <div class="card mt-4">
+      <div class="card-body">
+        <h1>Bike Details</h1>
+        <hr>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Brand</th>
+              <th>Model</th>
+              <th>Price/day</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let bike of bikeDetails">
+              <td>{{ bike.brand }}</td>
+              <td>{{ bike.model }}</td>
+              <td>₹{{ bike.price }} /-</td>
+              <td>{{ bike.location }}</td>
+            </tr>
+          </tbody>
+        </table>
+        
+    </div>
+    </div>
+  
+</div>
+</div>

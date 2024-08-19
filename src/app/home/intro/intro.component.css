@@ -1,0 +1,63 @@
+.heroImage{
+    background: url('src/assets/herobanner2.jpg') ;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.heroSearch{
+    text-shadow: 0 0 5px azure, 0 0 10px azure;
+}
+.client_section .client_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 45px;
+}
+
+.client_section .client_container .client_id {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.client_section .client_container .client_id h5 {
+    color: #1d1b28;
+  
+    margin-bottom: 5px;
+}
+
+
+
+.client_section .client_container .img-box {
+    width: 20%;
+    margin-right: 15px;
+}
+
+.client_section .client_container .img-box img {
+    width: 100%;
+    border-radius: 100%;
+}
+
+.client_section .client_container .detail-box {
+    
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 25px;
+    background: rgb(33,37,41);
+    color: white;
+}
+
+.client_section .client_container .detail-box span {
+    color: #44b89d;
+    font-size: 25px;
+}
+

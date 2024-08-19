@@ -1,0 +1,10 @@
+.heroImage{
+    background: url('src/assets/herobanner2.jpg') ;
+    height: 1100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+span{
+    color: red;
+}

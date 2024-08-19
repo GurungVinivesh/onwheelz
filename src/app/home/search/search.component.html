@@ -1,0 +1,64 @@
+<div class="heroImage bg-dark text-light">
+<section class="mt-5 mb-5">
+  <h1 class="text-center display-1" style=" text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px coral, 0 0 20px coral, 0 0 25px coral, 0 0 30px coral;  ">Rent now!</h1>
+  <div class="container text-center mt-5 mb-5">
+  <h1 class="display-4 mb8-4 mt-5" style=" text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px coral, 0 0 20px coral, 0 0 25px coral, 0 0 30px coral;   ">Search A ride?</h1>
+  <div class="d-flex justify-content-center align-items-center mt-5" id="homes">
+    <div class="heroSearch mt-5 mb-5">
+      
+      <form class="mt-4" [formGroup]="myForm" (ngSubmit)="onSearch()">
+        <label for="Leaving date">Leaving date</label>
+        <input class="form-control" type="date" formControlName="Leaving date">
+        <label for="Arriving date">Arriving date</label>
+        <input class="form-control" type="date" formControlName="Arriving date">
+        <br>
+        <select class="form-control mb-3" formControlName="searchLocation">
+          <option value="" disabled>Select a Location</option>
+          <option *ngFor="let option of searchLocationOptions" [value]="option">{{ option }}</option>
+        </select>
+      
+          <button class="btn btn-primary btn-lg" type="submit" id="searchbtn">Search</button>
+      </form>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="card mx-3" *ngFor="let bike of matchingBikes" style="width: 25%;">
+      <div class="card-header">
+        Bike Details
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{ bike.brand }} {{ bike.model }}</h5>
+        <p class="card-text">
+          <strong>Location:</strong> {{ bike.location }}<br>
+          <strong>Price:</strong> {{ bike.price }}
+        </p>
+        <button class="btn btn-primary" routerLink="/processingpay" routerLinkActive="active">Book</button>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+</div>
+
+ 
+    <div class="container">
+      <h1 class="text-center display-4 mb-5">Our Top 5 Rental Bikes:</h1>
+        <form>
+
+            <div class="row" >
+                <div class="col-md-4 p-2" *ngFor="let bike of bikeProducts" >
+                    <div class="card">
+                        <img [src]="bike.image" class="card-img-top" alt="Bike Image" id="bikeimage" >
+                        <div class="card-body" id="products">
+                            <h5 class="card-title">{{ bike.brand }}</h5>
+                            <h3 class="card-title">{{bike.model}}</h3>
+                            <p class="card-text">{{ bike.description }}</p>
+                            <p class="card-text">At {{bike.location}}</p>
+                            <p class="card-text">Rent: ₹{{ bike.rentPrice }}/day</p>
+                        </div>
+                </div>
+            </div>
+            </div>
+        </form>
+      </div>
+      

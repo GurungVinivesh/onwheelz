@@ -1,0 +1,39 @@
+
+.heroImage {
+    background: url('src/assets/bike31.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+#searchbtn {
+    background-color: white;
+    color: black;
+    border: 0;
+    border-radius: 5px;
+}
+
+#searchbtn:hover {
+    background-color: coral;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px coral, 0 0 20px coral, 0 0 25px coral, 0 0 30px coral;
+}
+#products{
+    height: 260px;
+}
+#bikeimage{
+    height: 210px;
+}
+.homeSearch {
+        position: relative;
+    margin: 0 auto;
+    font-size: 1rem;
+    width: 20%;
+    height: 50px;
+    border: none;
+    outline-color: #2DBEFF;
+    background-color: white;
+    padding: 0 10px;
+}

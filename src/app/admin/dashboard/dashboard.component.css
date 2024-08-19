@@ -1,0 +1,13 @@
+/* dashboard.component.css */
+
+ul.nav li.nav-item {
+    margin-bottom: 10px;
+  }
+  
+  ul.nav li.nav-item a.active {
+    font-weight: bold;
+  }
+  .nav-link:hover {
+    cursor: pointer;
+  }
+  

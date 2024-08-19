@@ -1,0 +1,79 @@
+<div class="heroImage bg-dark text-light mb-5">
+<div class="container d-flex justify-content-center mt-5 mb-5">
+    <div class="card col-md-8 mt-5 mb-5">
+        <div class="card-body mb-5">
+
+            <h1 class="text-center display-4">SIGNUP </h1>
+            <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                <!-- first name -->
+            <div class="form-outline mt-4">
+                
+                <label for="fname" class="form-label">Your name</label>
+                <input [maxlength]="20" type="text" class="form-control" placeholder="Enter your name"
+                formControlName="fname">
+                <div class="alert alert-warning" *ngIf="fname?.errors?.['required'] && fname?.touched">*First name is
+                    required</div>
+                    <div class="alert alert-danger" *ngIf="fname?.errors?.['pattern']">*Use correct context</div>
+                    
+                </div>
+                    <!-- phone number -->
+                    <div class="mt-4">
+                        
+                        <label for="phno" class="form-label">Phone Number</label>
+                        <input [maxLength]="10" type="tel" class="form-control" placeholder="Enter your phone number"
+                        formControlName="phno">
+                        <div class="alert alert-warning" *ngIf="phno?.errors?.['required'] && phno?.touched">*Phone number is
+                            required</div>
+                            <div class="alert alert-danger" *ngIf="phno?.errors?.['pattern']">*Use number</div>
+                        </div>
+                        <!-- email -->
+                        <div class="mt-4">
+                            
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="E.g: xyz@mail.com" formControlName="email">
+                            <div class="alert alert-warning" *ngIf="email?.errors?.['required'] && email?.touched">*Email is required
+                            </div>
+                            <div class="alert alert-danger" *ngIf="email?.errors?.['email']">*Enter an email</div>
+                            
+                        </div>
+                        <!-- password -->
+                        <div class="mt-4">
+                            <label for="npassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" placeholder="************" formControlName="npassword">
+                            <div class="alert alert-warning" *ngIf="npassword?.touched && npassword?.errors?.['required']">*Enter the
+                                password</div>
+                                <div class="alert alert-warning" *ngIf="signupForm.get('npassword')?.errors?.['pattern']">*Password must consist of atleast 8
+                                    characters. Password should consist of atleast one capital letter(A-Z), one special character(such as:
+                                    @,#), and some digits {{npassword?.value}}</div>
+                                </div>
+                                <!-- confirm password -->
+                                <div class="mt-4">
+                                    <label for="cpassword" class="form-label">Confirm Password</label>
+                                    <input type="password" class="form-control" placeholder="************" formControlName="cpassword">
+                                    <div class="alert alert-warning" *ngIf="cpassword?.errors?.['required'] && cpassword?.touched">*Enter the password</div>
+                                    <div class="alert alert-danger" *ngIf="npassword?.value !== cpassword?.value">*Password is not the same</div>
+                                </div>
+                                <!-- signup button -->
+                                <div class="d-grid gap-2 mt-4">
+                                    <button class="btn btn-primary" type="submit" [disabled]="!signupForm.valid" >SIGN UP</button>
+                                </div>
+
+                                <!-- pop up message -->
+                                <div class="popup" [ngClass]="{ 'show': successMessage }">
+                                    
+                                    <h2>Signup Successful!</h2>
+                                    <p>{{ successMessage }}</p>
+                                    <span class="btn btn-primary d-flex justify-content-center mt-3" (click)="closePopup()" routerLink="/intro" routerLinkActive="active">OK</span>
+                                  </div>
+                            </form>
+                            <hr>
+                            <!-- the login redirect -->
+                            <div class="text-center">
+                                <span>already have an account?</span>
+                                <a href="#" routerLink="/login" routerLinkActive="active"> login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                

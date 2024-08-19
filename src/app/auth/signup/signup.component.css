@@ -1,0 +1,40 @@
+.heroImage{
+    background: url('src/assets/herobanner2.jpg') ;
+    height: 1100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+  }
+  
+  .popup.show {
+    display: block;
+  }
+  
+  .popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+  }
+  
+  .popup p {
+    margin-bottom: 0;
+  }

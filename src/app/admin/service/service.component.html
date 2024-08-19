@@ -1,0 +1,52 @@
+<div class="container-fluid mt-5">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-2 bg-white text-dark">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link text-black" routerLink="/admindash" routerLinkActive="active">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" routerLink="/bikes" routerLinkActive="active">Bikes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" routerLink="/addride" routerLinkActive="active">Service</a>
+          </li>
+        </ul>
+      </div>
+  
+     
+        <div class="col-10">
+          <div class="card mt-4">
+            <div class="card-body">
+            <h1>Add Bike Details</h1>
+         <hr>
+                <form [formGroup]="bikeForm" (submit)="addBikeDetails()">
+                    <div class="form-group">
+                        <label for="bikeKey">Registration No.:</label>
+                        <input type="text" class="form-control" id="bikeKey" formControlName="bikeKey" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="brand">Brand:</label>
+                        <input type="text" class="form-control" id="brand" formControlName="brand" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Model:</label>
+                        <input type="text" class="form-control" id="model" formControlName="model" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price/day:</label>
+                        <input type="number" class="form-control" id="price" formControlName="price" required>
+                    </div>
+                    <div class="form-group">
+             <label for="location">Location:</label>
+             <input type="text" class="form-control" id="location" formControlName="location" required>
+            </div>
+            <!-- Add more form controls for other bike details as needed -->
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+    </div>
+    </div>
+</div>
+</div>
+</div>

@@ -1,0 +1,74 @@
+<!-- dashboard.component.html -->
+<div class="d-flex justify-content-center mt-5 mb-5" id="back">
+
+<!-- dashboard.component.html -->
+
+<div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar -->
+      <div class="col-2 bg-white text-dark">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link text-black" routerLink="/admindash" routerLinkActive="active">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" routerLink="/bikes" routerLinkActive="active">Bikes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" routerLink="/addride" routerLinkActive="active">Service</a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Main Content -->
+      <div class="col-10">
+        <div class="card mt-4">
+          <div class="card-body">
+            <h1>Welcome to the Bike Rental Admin Dashboard</h1>
+  
+            <!-- Additional Content -->
+            <div class="mt-4">
+              <h2>Statistics</h2>
+              <p>Total Users: 100</p>
+              <p>Total Bikes: 50</p>
+              <p>Total Orders: 200</p>
+            </div>
+  
+            <!-- Recent Orders -->
+            <div class="mt-4">
+              <h2>Recent Orders</h2>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>User</th>
+                    <th>Bike</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>Mountain Bike</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>Road Bike</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Mike Johnson</td>
+                    <td>City Bike</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  </div>    

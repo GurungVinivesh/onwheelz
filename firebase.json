@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "onwheelz",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

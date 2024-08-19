@@ -1,0 +1,68 @@
+<div class="heroImage bg-dark text-light mb-5">
+       <div class="bg-transparent mt-5 align-items-center d-flex text-center justify-content-center">
+            <div class="flex-item">
+                <h1 class="mt-5 text-white display-2">Are you an entrepreneur looking for a high ROI Business?
+                </h1>
+                <h4>Join India’s fastest growing bike rental business and get set up support and high demand from day 1.
+                </h4>
+            </div>
+
+        </div>
+    <div class="container-fluid align-items-center d-flex justify-content-center mt-5 mb-5">
+        <div class="card col-md-4 mt-5 mb-5">
+            <div class="card-body mb-5">
+
+                <h1>Want to join us?</h1>
+                <form [formGroup]="joinForm" (ngSubmit)="joinUs()">
+                    <!-- first name -->
+                    <div class="form-outline mt-4">
+
+                        <label for="fname" class="form-label">Your name</label>
+                        <input [maxlength]="20" type="text" class="form-control" placeholder="Enter your name"
+                            formControlName="fname">
+                        <span class="alert alert-fade" *ngIf="fname?.errors?.['required'] && fname?.touched">
+                            *Name is
+                            required</span>
+                        <span class="alert alert-fade" *ngIf="fname?.errors?.['pattern']">*Use correct context</span>
+
+                    </div>
+                         <!-- first name -->
+                         <div class="form-outline mt-4">
+
+                            <label for="fname" class="form-label">Store name and address</label>
+                            <input [maxlength]="20" type="text" class="form-control" placeholder="Enter store name & address"
+                                formControlName="storen">
+                            <span class="alert alert-fade" *ngIf="storen?.errors?.['required'] && storen?.touched">*Store name & address are required</span>    
+                        </div>
+                    <!-- phone number -->
+                    <div class="mt-4">
+
+                        <label for="phno" class="form-label">Phone Number</label>
+                        <input [maxLength]="10" type="tel" class="form-control" placeholder="Enter your phone number"
+                            formControlName="phno">
+                        <span class="alert alert-fade" *ngIf="phno?.errors?.['required'] && phno?.touched">*Phone
+                            number is
+                            required</span>
+                        <span class="alert alert-fade" *ngIf="phno?.errors?.['pattern']">*Use number</span>
+                    </div>
+                    <!-- email -->
+                    <div class="mt-4">
+
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="E.g: xyz@mail.com"
+                            formControlName="email">
+                        <span class="alert alert-fade" *ngIf="email?.errors?.['required'] && email?.touched">*Email is
+                            required
+                        </span>
+                        <span class="alert alert-fade" *ngIf="email?.errors?.['email']">*Enter an email</span>
+
+                    </div>
+                    <!-- joinUS button -->
+                    <div class="d-grid gap-2 mt-4">
+                        <button class="btn btn-primary" type="submit" [disabled]="!joinForm.valid">JOIN US</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
